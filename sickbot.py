@@ -10,7 +10,7 @@ key = '5BSi6mgVNV5cKzMV3uQHHz5fPZ0z40S2'
 @client.event
 async def on_ready():
     print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | '+str(len(client.servers))+' servers')
-    await client.change_presence(game=discord.Game(name='SickBot V0.2'))
+    await client.change_presence(game=discord.Game(name='SickBot V0.3'))
 
 @client.event
 async def on_message(message):
