@@ -6,7 +6,7 @@ import json
 client = discord.Client()
 user = 'Vh1Xu47ThdGBdHZi'
 key = '5BSi6mgVNV5cKzMV3uQHHz5fPZ0z40S2'
-name = 'Sick-Bot-Talk'
+name = '#Sick-Bot-Talk'
 
 @client.event
 async def on_ready():
@@ -15,7 +15,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if not message.author.bot and (channel.message == name and client.user in message.mentions):
+    if not message.author.bot and (message.channel == name and client.user in message.mentions):
         await client.send_typing(message.channel)
         txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
         r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'sickbot', 'text':txt}).text)
