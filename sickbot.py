@@ -14,8 +14,9 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name='SickBot V0.3'))
 
 @client.event
-async def on_message(message):
-    if message.textchannel == 'sick-bot-talk':
+async def on_message(message, channel):
+    get discord.textchannel(str)
+    if discord.textchannel == 'sick-bot-talk':
         await client.send_typing(message.channel)
         txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
         r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'sickbot', 'text':txt}).text)
