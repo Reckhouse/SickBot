@@ -14,8 +14,8 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name='SickBot V0.3'))
 
 @client.event
-async def on_message(message, channel):
-    get discord.textchannel(str)
+async def on_message(message):
+    def discord.textchannel(str)
     if discord.textchannel == 'sick-bot-talk':
         await client.send_typing(message.channel)
         txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
